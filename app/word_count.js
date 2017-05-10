@@ -1,21 +1,21 @@
 'use strict';
 
-const words = (str) =>{
-  let result = {};
+const words = (input) =>{
+  let resultObj = {};
 
   // Includes punctuation, international characters, removes whitespaces on both ends and split to form an array
-  let wordArr = str.replace(/'(?!\w)|\\'\s/g, "").replace(/\s\'(?=\w)|,|\n|\t|\b  \b/g, " ").trim().split(" ");
+  let wordArr = input.replace(/'(?!\w)|\\'\s/g, "").replace(/\s\'(?=\w)|,|\n|\t|\b  \b/g, " ").trim().split(" ");
   // Treat each element in the array individually
   wordArr.forEach((word) =>{
-  if (Object.hasOwnProperty.call(result, word)){
-    result[word] += 1;
+  if (Object.hasOwnProperty.call(resultObj, word)){
+    resultObj[word] += 1;
    } 
   else {
-    result[word] = 1;
+    resultObj[word] = 1;
   }   
 
   });
-  return result;
+  return resultObj;
 };
 
 module.exports = {
