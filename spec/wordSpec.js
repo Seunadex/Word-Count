@@ -56,4 +56,15 @@ describe("words()", function() {
     let expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, toString: 1,  "ok?": 1};
     expect(words.words("reserved words like prototype and toString ok?")).toEqual(expectedCounts);
   });
+
+  it('does not count leading or trailing whitespace', function() {
+    var expectedCounts = { Andela: 1, Bootcamp: 1 };
+    expect(words.words('\t\tAndela Bootcamp   ')).toEqual(expectedCounts);
+  });
+
+  it('handles cramped lists', function() {
+    var expectedCounts = { me: 1, myself: 1, I: 1 };
+    expect(words.words('me,myself,I')).toEqual(expectedCounts);
+  });
+
 });
