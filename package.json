@@ -1,0 +1,14 @@
+{
+  "name": "word_count",
+  "version": "1.0.0",
+  "description": "Function that counts the occurrence of each word in a string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seun Adekunle",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
