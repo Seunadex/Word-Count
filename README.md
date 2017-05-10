@@ -1,4 +1,4 @@
-# Word-Count
+# Word-Count(Coding Lab 2)
 Program containing a function called <b>words</b> that takes in a string argument and counts the occurrences of each word in the string.</br>
 
 ## Dependency
